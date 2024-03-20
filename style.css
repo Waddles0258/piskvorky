@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+body {
+  height: 100vh;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: 0;
+  color: #ffffff;
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.1rem;
+  text-align: center;
+  font-weight: 400;
+  background: linear-gradient(#615dad, #ffc8da) no-repeat;
+}
+
+.menu-conteiner {
+  margin: 0 auto;
+  max-width: 400px;
+  background-color: #283e50;
+  border-radius: 5px;
+}
+
+.menu-img {
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.menu-text {
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 20px;
+}
+
+.menu-title {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  font-family: "Lobster", sans-serif;
+  font-size: 3.6rem;
+  font-weight: 400;
+}
+
+.menu-button {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin: 0;
+  border-top: 2px solid #283e50;
+  display: block;
+  margin: 0;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu-button__rules {
+  background-color: #1fcca4;
+}
+
+.menu-button__rules:hover {
+  background-color: #1cbb96;
+  cursor: pointer;
+}
+
+.menu-button__start {
+  background-color: #0197f6;
+}
+
+.menu-button__start:hover {
+  background-color: #0090e9;
+  cursor: pointer;
+}
