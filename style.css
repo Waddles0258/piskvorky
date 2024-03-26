@@ -14,26 +14,26 @@ body {
   background: linear-gradient(#615dad, #ffc8da) no-repeat;
 }
 
-.menu-conteiner {
+.menu__conteiner {
   margin: 0 auto;
   max-width: 400px;
   background-color: #283e50;
   border-radius: 5px;
 }
 
-.menu-img {
+.menu__img {
   width: 100%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.menu-text {
+.menu__text {
   padding-left: 8px;
   padding-right: 8px;
   padding-bottom: 20px;
 }
 
-.menu-title {
+.menu__title {
   margin-top: 24px;
   margin-bottom: 24px;
   font-family: "Lobster", sans-serif;
@@ -41,7 +41,7 @@ body {
   font-weight: 400;
 }
 
-.menu-button {
+.menu__button {
   width: 100%;
   padding-top: 16px;
   padding-bottom: 16px;
@@ -53,20 +53,20 @@ body {
   color: #ffffff;
 }
 
-.menu-button__rules {
+.menu__button--rules {
   background-color: #1fcca4;
 }
 
-.menu-button__rules:hover {
+.menu__button--rules:hover {
   background-color: #1cbb96;
   cursor: pointer;
 }
 
-.menu-button__start {
+.menu__button--start {
   background-color: #0197f6;
 }
 
-.menu-button__start:hover {
+.menu__button--start:hover {
   background-color: #0090e9;
   cursor: pointer;
 }
