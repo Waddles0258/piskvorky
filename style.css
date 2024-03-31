@@ -33,7 +33,7 @@ body {
   padding-bottom: 20px;
 }
 
-.menu__title {
+.title {
   margin-top: 24px;
   margin-bottom: 24px;
   font-family: "Lobster", sans-serif;
@@ -62,6 +62,10 @@ body {
   cursor: pointer;
 }
 
+.menu__button--rules:focus {
+  background-color: #1ba786;
+}
+
 .menu__button--start {
   background-color: #0197f6;
 }
@@ -69,4 +73,96 @@ body {
 .menu__button--start:hover {
   background-color: #0090e9;
   cursor: pointer;
+}
+
+.menu__button--start:focus {
+  background-color: #0181d1;
+}
+
+.game__container {
+  max-width: 80vmin;
+  margin: 0 auto;
+}
+
+.game__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game__title {
+  margin: 0;
+  padding: 0;
+}
+
+.game__text {
+  width: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.game__navigation {
+  width: 108px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.game__img {
+  padding: 8px;
+}
+
+.game__navigation-container {
+  border-radius: 4px;
+}
+
+.game__navigation-container--home {
+  background-color: #1fcca4;
+}
+
+.game__navigation-container--home:hover {
+  background-color: #1cbb96;
+  cursor: pointer;
+}
+
+.game__navigation-container--home:focus {
+  background-color: #1ba786;
+}
+
+.game__navigation-container--restart {
+  background-color: #0197f6;
+}
+
+.game__navigation-container--restart:hover {
+  background-color: #0090e9;
+  cursor: pointer;
+}
+
+.game__navigation-container--restart:focus {
+  background-color: #0181d1;
+}
+
+.game__field {
+  height: 80vmin;
+  max-width: 80vmin;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  background: linear-gradient(#615dad, #ffc8da) no-repeat;
+}
+
+.game__btn {
+  width: 10%;
+  background-color: rgba(255, 255, 255, 0.4)
+}
+
+.game__btn:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  cursor: pointer;
+}
+
+.game__btn:focus {
+  background-color: rgba(255, 255, 255, 0);
 }
