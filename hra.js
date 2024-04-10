@@ -1,6 +1,6 @@
-let currentPlayer = 'circle';
-
 const user = document.querySelector('.game__img');
+
+let currentPlayer = 'circle';
 
 const buttonRestart = (event) => {
   if (confirm('Opravdu chceš začít znovu?') === true) {

@@ -157,8 +157,8 @@ body {
 .board__field--circle {
   background: url(circle.svg) no-repeat;
   animation-duration: 0.15s;
-  animation-name: slidein;
   background-size: 80%;
+  animation-name: slidein;
   background-position: center;
 }
 
