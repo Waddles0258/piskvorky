@@ -153,6 +153,35 @@ body {
   background: linear-gradient(#615dad, #ffc8da) no-repeat;
 }
 
+
+.board__field--circle {
+  background: url(circle.svg) no-repeat;
+  animation-duration: 0.15s;
+  animation-name: slidein;
+  background-size: 80%;
+  background-position: center;
+}
+
+.board__field--cross {
+  background: url(cross.svg) no-repeat;
+  animation-duration: 0.15s;
+  animation-name: slidein;
+  background-size: 80%;
+  background-position: center;
+}
+
+@keyframes slidein {
+  from {
+    background-size: 0%;
+    background-position: center;
+  }
+
+  to {
+    background-size: 80%;
+    background-position: center;
+  }
+}
+
 .game__btn {
   width: 10%;
   background-color: rgba(255, 255, 255, 0.4)
