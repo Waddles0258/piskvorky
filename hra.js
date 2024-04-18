@@ -1,6 +1,10 @@
+import { findWinner } from 'https://unpkg.com/piskvorky@0.1.4';
+
 const user = document.querySelector('.game__img');
 
 let currentPlayer = 'circle';
+
+const pole = document.querySelectorAll('.game__btn');
 
 const buttonRestart = (event) => {
   if (confirm('Opravdu chceš začít znovu?') === true) {
@@ -26,35 +30,31 @@ const buttonFunction = (event) => {
     user.setAttribute('src', 'circle.svg');
     event.target.disabled = true;
   }
+
+  const prepisSymbolu = [...pole].map((button) => {
+    if (button.classList.contains('board__field--circle')) {
+      return 'o';
+    } else if (button.classList.contains('board__field--cross')) {
+      return 'x';
+    } else {
+      return '_';
+    }
+  });
+
+  const winner = findWinner(prepisSymbolu);
+  if (winner === 'x') {
+    alert('vyhrál křížek');
+    location.reload();
+  } else if (winner === 'o') {
+    alert('vyhrálo kolečko');
+    location.reload();
+  } else if (winner === null) {
+    console.log('>');
+  } else {
+    alert('hra skončila remízou');
+  }
 };
 
-document
-  .querySelector('button:nth-child(1)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(2)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(3)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(4)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(5)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(6)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(7)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(8)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(9)')
-  .addEventListener('click', buttonFunction);
-document
-  .querySelector('button:nth-child(10)')
-  .addEventListener('click', buttonFunction);
+document.querySelectorAll('.game__btn').forEach((prvek) => {
+  prvek.addEventListener('click', buttonFunction);
+});
