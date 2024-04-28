@@ -72,15 +72,15 @@ const buttonFunction = async (event) => {
           'Content-type': 'application/json',
         },
         body: JSON.stringify({
-          board: findWinner,
+          board: prepisSymbolu,
           player: 'x',
         }),
       },
     );
     const data = await response.json();
     const { x, y } = data.position;
-    const index = x + y * 10;
-    index.click();
+    const field = pole[x + y * 10];
+    field.click();
   }
 };
 
