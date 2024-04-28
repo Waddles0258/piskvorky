@@ -18,7 +18,7 @@ document
   .querySelector('.game__navigation-container--restart')
   .addEventListener('click', buttonRestart);
 
-const buttonFunction = (event) => {
+const buttonFunction = async (event) => {
   if (currentPlayer === 'circle') {
     event.target.classList.add('board__field--circle');
     currentPlayer = 'cross';
@@ -43,15 +43,44 @@ const buttonFunction = (event) => {
 
   const winner = findWinner(prepisSymbolu);
   if (winner === 'x') {
-    alert('vyhrál křížek');
-    location.reload();
+    setTimeout(() => {
+      alert(`vyhrál křížek`);
+      location.reload();
+    }, 550);
   } else if (winner === 'o') {
-    alert('vyhrálo kolečko');
-    location.reload();
+    setTimeout(() => {
+      alert(`vyhrálo kolečko`);
+      location.reload();
+    }, 550);
   } else if (winner === null) {
     console.log('>');
   } else {
-    alert('hra skončila remízou');
+    setTimeout(() => {
+      alert(`Hra skončila remízou!`);
+      location.reload();
+    }, 550);
+  }
+
+  if (winner === null && currentPlayer === 'cross') {
+    console.log('křížek');
+
+    const response = await fetch(
+      'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+      {
+        method: 'POST',
+        headers: {
+          'Content-type': 'application/json',
+        },
+        body: JSON.stringify({
+          board: findWinner,
+          player: 'x',
+        }),
+      },
+    );
+    const data = await response.json();
+    const { x, y } = data.position;
+    const index = x + y * 10;
+    index.click();
   }
 };
 
